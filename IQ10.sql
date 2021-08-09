@@ -1,0 +1,11 @@
+SQL> select teacher_name, country, province, city, street, house_number, fax_number from teacher
+  2  join teachersaddress using(teacher_id)
+  3  join address using(address_id)
+  4  where teacher_name like'%_a';
+
+TEACHER_NAME              COUNTRY              PROVINCE                  CITY                 STREET               HOUSE_NUMBER FAX_NUMBER                                                                                                                                                                                                                                                                                                                                                                          
+------------------------- -------------------- ------------------------- -------------------- -------------------- ------------ ----------                                                                                                                                                                                                                                                                                                                                                                          
+bishwo lama               nepal                gandaki                   pokhara              lakeside                       23       2222                                                                                                                                                                                                                                                                                                                                                                          
+sanjip thapa              nepal                gandaki                   myagdi               nayabasti                      11       1111                                                                                                                                                                                                                                                                                                                                                                          
+
+SQL> spool off;

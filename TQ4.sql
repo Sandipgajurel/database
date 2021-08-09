@@ -1,0 +1,11 @@
+SQL> select teacher_name, salary, subcourse_name from subcourse
+  2  join relation using(subcourse_code)
+  3  join teacher using(teacher_id)
+  4  where subcourse_code=(select subcourse_code from subcourse where subcourse_name='computing');
+
+TEACHER_NAME                  SALARY SUBCOURSE_NAME                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+------------------------- ---------- -------------------------                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+bishwo lama                    60000 computing                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+bishwo lama                    60000 computing                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
+SQL> spool off
